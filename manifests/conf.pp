@@ -5,7 +5,8 @@
 # Maseeh College of Engineering and Computer Science
 #
 
-define iscsiinit::conf() {
+define iscsiinit::conf(
+  ) {
 
   file { "/etc/iscsid/iscsid.conf" :
   }
