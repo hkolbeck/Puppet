@@ -1,46 +1,67 @@
-#This file was generated with the following bit of ugliness: 
-#grep = iscsid.conf | grep -v '*' | perl -ne 'chomp; s/^#\s*//;s/=.*$//; $orig = $_; s/\[0\]//g; s/\./_/g; print "<% if $_!= \"\" -%>$orig=<%= $_-%><% end -%>\n"'
-
-<% if isns_address != "" -%>isns.address =<%= isns_address -%><% end -%>
-<% if isns_port != "" -%>isns.port =<%= isns_port -%><% end -%>
-<% if node_startup != "" -%>node.startup =<%= node_startup -%><% end -%>
-<% if node_startup != "" -%>node.startup =<%= node_startup -%><% end -%>
-<% if node_session_auth_authmethod != "" -%>node.session.auth.authmethod =<%= node_session_auth_authmethod -%><% end -%>
-<% if node_session_auth_username != "" -%>node.session.auth.username =<%= node_session_auth_username -%><% end -%>
-<% if node_session_auth_password != "" -%>node.session.auth.password =<%= node_session_auth_password -%><% end -%>
-<% if node_session_auth_username_in != "" -%>node.session.auth.username_in =<%= node_session_auth_username_in -%><% end -%>
-<% if node_session_auth_password_in != "" -%>node.session.auth.password_in =<%= node_session_auth_password_in -%><% end -%>
-<% if discovery_sendtargets_auth_authmethod != "" -%>discovery.sendtargets.auth.authmethod =<%= discovery_sendtargets_auth_authmethod -%><% end -%>
-<% if discovery_sendtargets_auth_username != "" -%>discovery.sendtargets.auth.username =<%= discovery_sendtargets_auth_username -%><% end -%>
-<% if discovery_sendtargets_auth_password != "" -%>discovery.sendtargets.auth.password =<%= discovery_sendtargets_auth_password -%><% end -%>
-<% if discovery_sendtargets_auth_username_in != "" -%>discovery.sendtargets.auth.username_in =<%= discovery_sendtargets_auth_username_in -%><% end -%>
-<% if discovery_sendtargets_auth_password_in != "" -%>discovery.sendtargets.auth.password_in =<%= discovery_sendtargets_auth_password_in -%><% end -%>
-<% if node_session_timeo_replacement_timeout != "" -%>node.session.timeo.replacement_timeout =<%= node_session_timeo_replacement_timeout -%><% end -%>
-<% if node_conn_timeo_login_timeout != "" -%>node.conn[0].timeo.login_timeout =<%= node_conn_timeo_login_timeout -%><% end -%>
-<% if node_conn_timeo_logout_timeout != "" -%>node.conn[0].timeo.logout_timeout =<%= node_conn_timeo_logout_timeout -%><% end -%>
-<% if node_conn_timeo_noop_out_interval != "" -%>node.conn[0].timeo.noop_out_interval =<%= node_conn_timeo_noop_out_interval -%><% end -%>
-<% if node_conn_timeo_noop_out_timeout != "" -%>node.conn[0].timeo.noop_out_timeout =<%= node_conn_timeo_noop_out_timeout -%><% end -%>
-<% if node_session_err_timeo_abort_timeout != "" -%>node.session.err_timeo.abort_timeout =<%= node_session_err_timeo_abort_timeout -%><% end -%>
-<% if node_session_err_timeo_lu_reset_timeout != "" -%>node.session.err_timeo.lu_reset_timeout =<%= node_session_err_timeo_lu_reset_timeout -%><% end -%>
-<% if node_session_initial_login_retry_max != "" -%>node.session.initial_login_retry_max =<%= node_session_initial_login_retry_max -%><% end -%>
-<% if node_session_cmds_max != "" -%>node.session.cmds_max =<%= node_session_cmds_max -%><% end -%>
-<% if node_session_queue_depth != "" -%>node.session.queue_depth =<%= node_session_queue_depth -%><% end -%>
-<% if node_session_xmit_thread_priority != "" -%>node.session.xmit_thread_priority =<%= node_session_xmit_thread_priority -%><% end -%>
-<% if node_session_iscsi_InitialR2T != "" -%>node.session.iscsi.InitialR2T =<%= node_session_iscsi_InitialR2T -%><% end -%>
-<% if node_session_iscsi_InitialR2T != "" -%>node.session.iscsi.InitialR2T =<%= node_session_iscsi_InitialR2T -%><% end -%>
-<% if node_session_iscsi_ImmediateData != "" -%>node.session.iscsi.ImmediateData =<%= node_session_iscsi_ImmediateData -%><% end -%>
-<% if node_session_iscsi_ImmediateData != "" -%>node.session.iscsi.ImmediateData =<%= node_session_iscsi_ImmediateData -%><% end -%>
-<% if node_session_iscsi_FirstBurstLength != "" -%>node.session.iscsi.FirstBurstLength =<%= node_session_iscsi_FirstBurstLength -%><% end -%>
-<% if node_session_iscsi_MaxBurstLength != "" -%>node.session.iscsi.MaxBurstLength =<%= node_session_iscsi_MaxBurstLength -%><% end -%>
-<% if node_conn_iscsi_MaxRecvDataSegmentLength != "" -%>node.conn[0].iscsi.MaxRecvDataSegmentLength =<%= node_conn_iscsi_MaxRecvDataSegmentLength -%><% end -%>
-<% if discovery_sendtargets_iscsi_MaxRecvDataSegmentLength != "" -%>discovery.sendtargets.iscsi.MaxRecvDataSegmentLength =<%= discovery_sendtargets_iscsi_MaxRecvDataSegmentLength -%><% end -%>
-<% if node_conn_iscsi_HeaderDigest != "" -%>node.conn[0].iscsi.HeaderDigest =<%= node_conn_iscsi_HeaderDigest -%><% end -%>
-<% if node_conn_iscsi_DataDigest != "" -%>node.conn[0].iscsi.DataDigest =<%= node_conn_iscsi_DataDigest -%><% end -%>
-<% if node_conn_iscsi_HeaderDigest != "" -%>node.conn[0].iscsi.HeaderDigest =<%= node_conn_iscsi_HeaderDigest -%><% end -%>
-<% if node_conn_iscsi_DataDigest != "" -%>node.conn[0].iscsi.DataDigest =<%= node_conn_iscsi_DataDigest -%><% end -%>
-<% if node_conn_iscsi_HeaderDigest != "" -%>node.conn[0].iscsi.HeaderDigest =<%= node_conn_iscsi_HeaderDigest -%><% end -%>
-<% if node_conn_iscsi_DataDigest != "" -%>node.conn[0].iscsi.DataDigest =<%= node_conn_iscsi_DataDigest -%><% end -%>
-<% if node_conn_iscsi_HeaderDigest != "" -%>node.conn[0].iscsi.HeaderDigest =<%= node_conn_iscsi_HeaderDigest -%><% end -%>
-<% if node_conn_iscsi_DataDigest != "" -%>node.conn[0].iscsi.DataDigest =<%= node_conn_iscsi_DataDigest -%><% end -%>
-<% if node_session_iscsi_FastAbort != "" -%>node.session.iscsi.FastAbort =<%= node_session_iscsi_FastAbort -%><% end -%>
-<% if node_session_iscsi_FastAbort != "" -%>node.session.iscsi.FastAbort =<%= node_session_iscsi_FastAbort -%><% end -%>
+<% if discovery_sendtargets_auth_authmethod!= "" -%>
+discovery.sendtargets.auth.authmethod= <%= discovery_sendtargets_auth_authmethod%>
+<% end -%><% if discovery_sendtargets_auth_password!= "" -%>
+discovery.sendtargets.auth.password= <%= discovery_sendtargets_auth_password%>
+<% end -%><% if discovery_sendtargets_auth_password_in!= "" -%>
+discovery.sendtargets.auth.password_in= <%= discovery_sendtargets_auth_password_in%>
+<% end -%><% if discovery_sendtargets_auth_username!= "" -%>
+discovery.sendtargets.auth.username= <%= discovery_sendtargets_auth_username%>
+<% end -%><% if discovery_sendtargets_auth_username_in!= "" -%>
+discovery.sendtargets.auth.username_in= <%= discovery_sendtargets_auth_username_in%>
+<% end -%><% if discovery_sendtargets_iscsi_MaxRecvDataSegmentLength!= "" -%>
+discovery.sendtargets.iscsi.MaxRecvDataSegmentLength= <%= discovery_sendtargets_iscsi_MaxRecvDataSegmentLength%>
+<% end -%><% if isns_address!= "" -%>
+isns.address= <%= isns_address%>
+<% end -%><% if isns_port!= "" -%>
+isns.port= <%= isns_port%>
+<% end -%><% if node_conn0_iscsi_DataDigest!= "" -%>
+node.conn[0].iscsi.DataDigest= <%= node_conn0_iscsi_DataDigest%>
+<% end -%><% if node_conn0_iscsi_HeaderDigest!= "" -%>
+node.conn[0].iscsi.HeaderDigest= <%= node_conn0_iscsi_HeaderDigest%>
+<% end -%><% if node_conn0_iscsi_MaxRecvDataSegmentLength!= "" -%>
+node.conn[0].iscsi.MaxRecvDataSegmentLength= <%= node_conn0_iscsi_MaxRecvDataSegmentLength%>
+<% end -%><% if node_conn0_timeo_login_timeout!= "" -%>
+node.conn[0].timeo.login_timeout= <%= node_conn0_timeo_login_timeout%>
+<% end -%><% if node_conn0_timeo_logout_timeout!= "" -%>
+node.conn[0].timeo.logout_timeout= <%= node_conn0_timeo_logout_timeout%>
+<% end -%><% if node_conn0_timeo_noop_out_interval!= "" -%>
+node.conn[0].timeo.noop_out_interval= <%= node_conn0_timeo_noop_out_interval%>
+<% end -%><% if node_conn0_timeo_noop_out_timeout!= "" -%>
+node.conn[0].timeo.noop_out_timeout= <%= node_conn0_timeo_noop_out_timeout%>
+<% end -%><% if node_session_auth_authmethod!= "" -%>
+node.session.auth.authmethod= <%= node_session_auth_authmethod%>
+<% end -%><% if node_session_auth_password!= "" -%>
+node.session.auth.password= <%= node_session_auth_password%>
+<% end -%><% if node_session_auth_password_in!= "" -%>
+node.session.auth.password_in= <%= node_session_auth_password_in%>
+<% end -%><% if node_session_auth_username!= "" -%>
+node.session.auth.username= <%= node_session_auth_username%>
+<% end -%><% if node_session_auth_username_in!= "" -%>
+node.session.auth.username_in= <%= node_session_auth_username_in%>
+<% end -%><% if node_session_cmds_max!= "" -%>
+node.session.cmds_max= <%= node_session_cmds_max%>
+<% end -%><% if node_session_err_timeo_abort_timeout!= "" -%>
+node.session.err_timeo.abort_timeout= <%= node_session_err_timeo_abort_timeout%>
+<% end -%><% if node_session_err_timeo_lu_reset_timeout!= "" -%>
+node.session.err_timeo.lu_reset_timeout= <%= node_session_err_timeo_lu_reset_timeout%>
+<% end -%><% if node_session_initial_login_retry_max!= "" -%>
+node.session.initial_login_retry_max= <%= node_session_initial_login_retry_max%>
+<% end -%><% if node_session_iscsi_FastAbort!= "" -%>
+node.session.iscsi.FastAbort= <%= node_session_iscsi_FastAbort%>
+<% end -%><% if node_session_iscsi_FirstBurstLength!= "" -%>
+node.session.iscsi.FirstBurstLength= <%= node_session_iscsi_FirstBurstLength%>
+<% end -%><% if node_session_iscsi_ImmediateData!= "" -%>
+node.session.iscsi.ImmediateData= <%= node_session_iscsi_ImmediateData%>
+<% end -%><% if node_session_iscsi_InitialR2T!= "" -%>
+node.session.iscsi.InitialR2T= <%= node_session_iscsi_InitialR2T%>
+<% end -%><% if node_session_iscsi_MaxBurstLength!= "" -%>
+node.session.iscsi.MaxBurstLength= <%= node_session_iscsi_MaxBurstLength%>
+<% end -%><% if node_session_queue_depth!= "" -%>
+node.session.queue_depth= <%= node_session_queue_depth%>
+<% end -%><% if node_session_timeo_replacement_timeout!= "" -%>
+node.session.timeo.replacement_timeout= <%= node_session_timeo_replacement_timeout%>
+<% end -%><% if node_session_xmit_thread_priority!= "" -%>
+node.session.xmit_thread_priority= <%= node_session_xmit_thread_priority%>
+<% end -%><% if node_startup!= "" -%>
+node.startup= <%= node_startup%>
+<% end -%>
