@@ -1,0 +1,14 @@
+[<%= name%>]
+Identity=<% groups.each do |g| -%>unix-group:<%= g -%>;<% end -%><% users.each do |u| -%>unix-user:<%= u -%>;<% end -%>
+
+Action=<% actions.each do |a| -%><%= a -%>;<% end -%>
+
+<% if result_any != "" -%>
+ResultAny=<%= result_any -%>
+<% end %>
+<% if result_active != "" -%>
+ResultActive=<%= result_active -%>
+<% end %>
+<% if result_inactive != "" -%>
+ResultInactive=<%= result_inactive -%>
+<% end %>

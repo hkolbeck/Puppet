@@ -8,5 +8,5 @@
 import "conf.pp"
 import "connect.pp"
 
-class iscsiinit {
+class iscsi {
 }
