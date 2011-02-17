@@ -18,4 +18,3 @@ define iscsi::connect(
     unless => "iscsiadm -m session | grep '$target'"
   }
 }
-
