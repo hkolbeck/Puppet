@@ -13,8 +13,9 @@ define iscsi::connect(
   ) {
   
   exec { "connect to target:$target at $ip:$port" : 
-    command => "iscsiadm -m node -T $target -p $ip:$port --login"
+    command => "iscsiadm -m node -T $target -p $ip:$port --login",
     path => "/bin:/usr/bin:/sbin:/usr/sbin",
-    onlyif => "iscsiadm -m discovery -t $discovertype -p $ip:$port" #session
+    unless => "iscsiadm -m session | grep '$target'"
   }
 }
+
